@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
 
@@ -25,8 +26,8 @@ int typing()
 
                 for (j=0; j < match_length; j++)
                 {
-                        int rand_int = rand() % match_length;
-                        word[j]=match[rand_int];
+                        int rand_int = rand() % getlen(all_chars);
+                        word[j]=all_chars[rand_int];
                 }
                 //print_str(word);
                 if (strcmp(word, match))
